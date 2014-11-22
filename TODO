@@ -1,5 +1,10 @@
 simulation/tutorial:
-* handle the 'spawn full of energy' case for harvesters
+* harvester.js: handle the 'spawn full of energy' case
+* builder.js: handle the 'spawn out of energy' case
 * garbagecollector.js:
 ** handle persistent objects for which the data should not be forgotten
 ** handle objects which should be respawned as soon as possible after they die
+* *.js:
+** 'safe mode' when energy is low / resources are scarce, to maximize survivability
+       (e.g. draw only absolutely necessary energy from the spawn if it doesn't have much)
+** mechanism to factorize the ubiquitous 'findNearest; if(!isNearTo) moveTo; else doSomething;'
