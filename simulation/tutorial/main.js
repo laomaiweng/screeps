@@ -1,5 +1,9 @@
+// main.js
+
+// Initialize the game
 require('init');
 
+// Process the creeps
 var builder = require('builder');
 var guard = require('guard');
 var harvester = require('harvester');
@@ -25,10 +29,12 @@ for (var name in Game.creeps) {
     }
 }
 
+// Process the spawns
 var population = require('population');
 for(var name in Game.spawns) {
     population(Game.spawns[name]);
 }
 
+// Cleanup dead objects
 require('garbagecollector');
 

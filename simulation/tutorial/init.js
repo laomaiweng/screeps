@@ -1,3 +1,4 @@
+// init.js
 /*
  * Module code goes here. Use 'module.exports' to export things:
  * module.exports = 'a thing';
@@ -6,7 +7,9 @@
  * var mod = require('init'); // -> 'a thing'
  */
 
+// Check for the initialization flag
 if (!Memory.init) {
+    // Initialization not done: do it
     for (var name in Game.spawns) {
         var spawn = Game.spawns[name];
         spawn.memory.populationRange = 20;
@@ -17,6 +20,7 @@ if (!Memory.init) {
         spawn.memory.creepSpecs['healer'] = [Game.HEAL,Game.MOVE];
         spawn.memory.minPopulation = {'harvester': 3, 'builder': 1, 'guard': 0, 'healer': 0};
     }
+    // Set the initialization flag
     Memory.init = true;
 }
 
