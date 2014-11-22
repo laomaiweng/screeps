@@ -1,3 +1,5 @@
+require('init');
+
 var builder = require('builder');
 var guard = require('guard');
 var harvester = require('harvester');
