@@ -26,7 +26,9 @@ for (var name in Game.creeps) {
 }
 
 var population = require('population');
-for(name in Game.spawns) {
+for(var name in Game.spawns) {
     population(Game.spawns[name]);
 }
+
+require('garbagecollector');
 

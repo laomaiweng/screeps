@@ -1,3 +1,5 @@
 simulation/tutorial:
-* cleanup module to remove dead creeps and such from memory
 * handle the 'spawn full of energy' case for harvesters
+* garbagecollector.js:
+** handle persistent objects for which the data should not be forgotten
+** handle objects which should be respawned as soon as possible after they die
