@@ -1,2 +1,3 @@
 simulation/tutorial:
 * cleanup module to remove dead creeps and such from memory
+* handle the 'spawn full of energy' case for harvesters
